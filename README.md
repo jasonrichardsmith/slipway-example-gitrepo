@@ -9,4 +9,6 @@ This article assumes you are running your own local clone.
 You will need a Kubernetes cluster with [Slipway controller running
 on the cluster](https://github.com/slipway-gitops/slipway/blob/master/DEPLOY.md).
 
+All examples will be using the [slipway-example-app](https://github.com/slipway-gitops/slipway-example-app/).
+
 - [Basic Example](BASIC.md)
