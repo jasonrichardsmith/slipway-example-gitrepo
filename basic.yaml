@@ -1,0 +1,12 @@
+apiVersion: git.gitops.slipway.org/v1
+kind: GitRepo
+metadata:
+  name: gitrepo-sample
+spec:
+  uri: "git@github.com:slipway-gitops/slipway-examples.git"
+  operations:
+    - operation: test
+      path: "git@github.com:slipway-gitops/slipway-examples.git//kustomize/base"
+      weight: 3
+      optype: branch
+      reference: master
