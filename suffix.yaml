@@ -1,0 +1,15 @@
+apiVersion: git.gitops.slipway.org/v1
+kind: GitRepo
+metadata:
+  name: gitrepo-sample
+spec:
+  uri: "git@github.com:slipway-gitops/slipway-example-app.git"
+  operations:
+    - operation: test
+      path: "git@github.com:slipway-gitops/slipway-example-app.git//kustomize/base"
+      weight: 3
+      optype: branch
+      reference: m[a-z]+r
+      transformers:
+        - type: suffix
+          value: hash
