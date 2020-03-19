@@ -375,29 +375,3 @@ You can tear down now.
 $ kubectl delete gitrepo gitrepo-sample 
 ```
 
-
-
-```
-$ kubectl get all -n 75f4b6e33ebbf8e0977dca4062c8ced9d49eeeda
-NAME                                  READY   STATUS    RESTARTS   AGE
-pod/the-deployment-7fd7749979-62bkt   1/1     Running   0          4m56s
-pod/the-deployment-7fd7749979-dmngd   1/1     Running   0          4m56s
-pod/the-deployment-7fd7749979-snxtt   1/1     Running   0          4m56s
-
-NAME                  TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
-service/the-service   LoadBalancer   10.104.10.101   <pending>     8666:32646/TCP   4m56s
-
-NAME                             READY   UP-TO-DATE   AVAILABLE   AGE
-deployment.apps/the-deployment   3/3     3            3           4m56s
-
-NAME                                        DESIRED   CURRENT   READY   AGE
-replicaset.apps/the-deployment-7fd7749979   3         3         3       4m56s
-```
-We can see all the objects were created there.
-
-
-
-
-
-
-
