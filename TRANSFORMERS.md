@@ -330,7 +330,7 @@ spec:
       transformers:
         - type: image
           value: foo
-	  key: monopole/hello
+          key: monopole/hello
 ```
 This will assign the tag "foo" to the image that has a name "monopole/hello".
 
