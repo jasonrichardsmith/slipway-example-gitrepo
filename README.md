@@ -12,3 +12,4 @@ on the cluster](https://github.com/slipway-gitops/slipway/blob/master/DEPLOY.md)
 All examples will be using the [slipway-example-app](https://github.com/slipway-gitops/slipway-example-app/).
 
 - [Basic Example](BASIC.md)
+- [Regex for References](REGEX.md)
