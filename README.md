@@ -16,3 +16,4 @@ All examples will be using the [slipway-example-app](https://github.com/slipway-
 - [Setting the Path](PATH.md)
 - [Transformers](TRANSFORMERS.md)
 - [Pull Requests](PULLS.md)
+- [Branch Updates](BRANCHES.md)
