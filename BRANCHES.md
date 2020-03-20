@@ -66,12 +66,12 @@ Note the Hash name. This should change.
 To see that out change has taken place we need to see the current output of our Service.
 
 ```
-$kubectl port-forward service/the-service 8000:8666
+$ kubectl port-forward service/the-service 8000:8666
 ```
 Then we can curl or just open the url in a browser.
 [http://localhost:8000](http://localhost:8000)
 ```bash
-curl http://localhost:8000/
+$ curl http://localhost:8000/
 <html><body>
 Version 1 : Good Morning!
 </body></html>
@@ -125,7 +125,7 @@ Then we can curl or just open the url in a browser.
 [http://localhost:8000](http://localhost:8000)
 
 ```bash
-curl http://localhost:8000/
+$ curl http://localhost:8000/
 <html><body>
 Version 1 : Howdy Howdy!
 </body></html>
