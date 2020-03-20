@@ -15,3 +15,4 @@ All examples will be using the [slipway-example-app](https://github.com/slipway-
 - [Regex for References](REGEX.md)
 - [Setting the Path](PATH.md)
 - [Transformers](TRANSFORMERS.md)
+- [Pull Requests](PULLS.md)
