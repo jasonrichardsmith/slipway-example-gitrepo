@@ -63,9 +63,32 @@ slipway-system    Active   138m
 
 These namespaces coincide with only the
 [active pull requests](https://github.com/slipway-gitops/slipway-example-app/pulls?q=is%3Apr)
-in your repo and will be removed if a branch gets closed or deleted.  You will have to experiment
+in your repo and will be removed if a branch gets merged or deleted.  You will have to experiment
 with this yourself on a private repo.
+
+You can see all objects were deployed in both namespaces.
+```
+$ kubectl get all -n pull-3
+NAME                                  READY   STATUS    RESTARTS   AGE
+pod/the-deployment-7fd7749979-4cb9r   1/1     Running   0          8m27s
+pod/the-deployment-7fd7749979-npbsv   1/1     Running   0          8m27s
+pod/the-deployment-7fd7749979-xz22h   1/1     Running   0          8m27s
+
+NAME                  TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+service/the-service   LoadBalancer   10.103.134.204   <pending>     8666:32378/TCP   8m27s
+
+NAME                             READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/the-deployment   3/3     3            3           8m27s
+
+NAME                                        DESIRED   CURRENT   READY   AGE
+replicaset.apps/the-deployment-7fd7749979   3         3         3       8m27s
+```
 
 If you were to add a "hashpath: true" the kustomize would run against the merged pull request
 meaning you could possibly run any kustomize, so always trust the source.
+
+You can tear it down.
+```bash
+$ kubectl delete gitrepo gitrepo-sample
+```
 
